@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+        }
+        h1 {
+        margin-top: 50px;
+        font-size: 40px;
+        color: #ffffff;
+        transition: color 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+    }
+
+        h1:hover {
+        color: #ffed66;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+        form {
+            margin-top: 30px;
+        }
+        input[type="number"] {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        button {
+        padding: 10px 20px;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.4s ease, border-color 0.4s ease;
+    }
+
+        button:hover {
+        background-color: transparent;
+        color: #fff;
+        border-color: #fff;
+    }
+
+        .result {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .result p {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fibonacci Series Generator</h1>
+    <form method="POST">
+        <input type="number" name="count" placeholder="Enter number of values" required>
+        <button type="submit">Generate</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            <h2>Fibonacci Series:</h2>
+            <p>{{ result | join(", ") }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
